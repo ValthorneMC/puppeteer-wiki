@@ -4,7 +4,6 @@ on:
   push:
     branches: [main]
     paths:
-      - 'puppeteer-wiki/**'
       - '.github/workflows/deploy.yml'
   workflow_dispatch:
 
@@ -22,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: puppeteer-wiki
+        working-directory: /
     steps:
       - name: Checkout
         uses: actions/checkout@v5
@@ -33,12 +32,12 @@ jobs:
         with:
           node-version: 22
           cache: npm
-          cache-dependency-path: puppeteer-wiki/package-lock.json
+          cache-dependency-path: package-lock.json
       - name: Cache VitePress
         uses: actions/cache@v4
         with:
-          path: puppeteer-wiki/docs/.vitepress/cache
-          key: ${{ runner.os }}-vitepress-${{ hashFiles('puppeteer-wiki/docs/**') }}
+          path: docs/.vitepress/cache
+          key: ${{ runner.os }}-vitepress-${{ hashFiles('docs/**') }}
           restore-keys: |
             ${{ runner.os }}-vitepress-
       - name: Setup Pages
@@ -50,7 +49,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: puppeteer-wiki/docs/.vitepress/dist
+          path: docs/.vitepress/dist
 
   deploy:
     environment:
