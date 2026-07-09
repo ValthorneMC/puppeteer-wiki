@@ -4,10 +4,6 @@
 
 No — Puppeteer reemplaza a Sentinel por completo. Todo lo que hacía Sentinel con comandos se hace aquí escribiendo la sección `combat:` en un script. Puedes desinstalar Sentinel una vez migres tus NPCs.
 
-### ¿Necesito MythicMobs/BetterModel/VEconomy/WorldGuard para usar Puppeteer?
-
-No, ninguno es obligatorio (solo Citizens lo es). Cada uno añade una posibilidad extra si lo tienes instalado — ver [Instalación](/guia/instalacion). Si no lo tienes, esa parte concreta del script simplemente no hace nada; el resto del NPC funciona igual.
-
 ### ¿Puedo usar el mismo script en varios NPCs?
 
 Sí. Asigna el mismo nombre de script a tantos NPCs como quieras con `/puppeteer assign <nombre>` — cada NPC lleva su propio estado (vida, objetivo actual, etc.) por separado, aunque compartan el mismo comportamiento escrito.

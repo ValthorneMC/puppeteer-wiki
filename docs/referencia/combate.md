@@ -1,6 +1,6 @@
 # Combate
 
-La sección `combat:` de un `assignment` convierte al NPC en un combatiente completo: elige a quién atacar, se acerca, cambia de arma según la distancia, dispara flechas de verdad apuntando al objetivo, recibe daño, se cura poco a poco, muere y reaparece más tarde. No hace falta ningún plugin adicional para esto — es todo de Puppeteer.
+La sección `combat:` de un `assignment` convierte al NPC en un combatiente completo: elige a quién atacar, se acerca, cambia de arma según la distancia, dispara flechas de verdad apuntando al objetivo, recibe daño, se cura poco a poco, muere y reaparece más tarde.
 
 ## Ejemplo completo
 
@@ -83,7 +83,7 @@ Por defecto, un NPC de combate **sí puede morir** — Puppeteer lo hace vulnera
 Cada entrada de `targets`/`ignore` puede ser:
 
 - `players` — cualquier jugador (los que estén en modo creativo o espectador quedan siempre excluidos, se ataque o no).
-- `"mythicmob:<nombre>"` — un tipo concreto de mob de MythicMobs (necesita MythicMobs instalado). Ejemplo: `"mythicmob:goblin_archer"`.
+- `"mythicmob:<nombre>"` — un tipo concreto de mob de MythicMobs. Ejemplo: `"mythicmob:goblin_archer"`.
 - `"permission:<permiso>"` — jugadores con ese permiso.
 - El nombre de un tipo de entidad vanilla, por ejemplo `ZOMBIE` o `SKELETON`.
 
@@ -95,7 +95,7 @@ Cada entrada de `targets`/`ignore` puede ser:
 |---|---|
 | `item` | El material del arma (`DIAMOND_SWORD`, `BOW`, etc.) — también es lo que lleva equipado en la mano. |
 | `range` | `[mínimo, máximo]` en bloques — a qué distancia se usa esta arma. |
-| `animation` | Animación a reproducir al usarla (necesita BetterModel). |
+| `animation` | Animación a reproducir al usarla (BetterModel). |
 | `projectile` | **Solo para armas a distancia.** El tipo de proyectil a disparar (`ARROW`, `SNOWBALL`, `TRIDENT`...). Si no pones esto, el arma se trata como cuerpo a cuerpo. |
 | `damage` | Daño de esta arma. Si no lo pones, Puppeteer usa un valor razonable según el tipo de arma. |
 | `sound` | Sonido a reproducir al atacar/disparar (nombre de la lista de sonidos de Minecraft, por ejemplo `ENTITY_ARROW_SHOOT`). |
@@ -141,7 +141,7 @@ combat:
 
 ## Restringir a una zona (`region`)
 
-Con **WorldGuard** instalado, puedes impedir que el NPC persiga o vigile fuera de una región concreta:
+Impide que el NPC persiga o vigile fuera de una región de WorldGuard concreta:
 
 ```yaml
 combat:

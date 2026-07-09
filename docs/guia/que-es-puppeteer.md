@@ -10,9 +10,9 @@ Un script se puede reutilizar en varios NPCs (todos los guardias usan el mismo `
 - **Hablar**: mensajes fijos o elegidos al azar.
 - **Moverse**: mirar, caminar a un punto, seguir una ruta de patrulla grabada.
 - **Pelear**: elegir objetivo, cambiar de arma según distancia, perseguir, disparar flechas apuntando de verdad, recibir daño, curarse, morir y reaparecer.
-- **Animarse**: reproducir animaciones de su modelo (con BetterModel).
-- **Repartir recompensas**: dar dinero al morir (VEconomy) o lanzar habilidades de MythicMobs.
+- **Animarse**: reproducir animaciones de su modelo, con BetterModel.
+- **Repartir recompensas**: dar dinero al morir con VEconomy, o lanzar habilidades de MythicMobs.
 
-`/puppeteer reload` aplica los cambios de cualquier script sin reiniciar el servidor.
+`/puppeteer reload` aplica los cambios de cualquier script sin reiniciar el servidor. Los archivos van en `plugins/Puppeteer/scripts/` (y las rutas de patrulla, en `plugins/Puppeteer/paths/`).
 
-Sigue con [Instalación](/guia/instalacion) o directo a [Tu primer NPC](/guia/primer-npc).
+Sigue con [Tu primer NPC](/guia/primer-npc) o con el [Índice completo](/referencia/indice) de todo lo disponible.

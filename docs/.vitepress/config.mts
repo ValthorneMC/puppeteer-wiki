@@ -11,7 +11,7 @@ export default defineConfig({
     nav: [
       { text: 'Inicio', link: '/' },
       { text: 'Cómo funciona', link: '/guia/que-es-puppeteer' },
-      { text: 'Referencia', link: '/referencia/comandos-de-consola' },
+      { text: 'Índice completo', link: '/referencia/indice' },
       { text: 'Ayuda', link: '/ayuda/solucion-de-problemas' }
     ],
 
@@ -20,7 +20,6 @@ export default defineConfig({
         text: 'Guía',
         items: [
           { text: 'Cómo funciona', link: '/guia/que-es-puppeteer' },
-          { text: 'Instalación', link: '/guia/instalacion' },
           { text: 'Tu primer NPC', link: '/guia/primer-npc' },
           { text: 'Conceptos básicos', link: '/guia/conceptos' },
           { text: 'Rutas de patrulla', link: '/guia/rutas' }
@@ -29,6 +28,7 @@ export default defineConfig({
       {
         text: 'Referencia',
         items: [
+          { text: 'Índice completo', link: '/referencia/indice' },
           { text: 'Comandos de consola', link: '/referencia/comandos-de-consola' },
           { text: 'Acciones de script', link: '/referencia/acciones' },
           { text: 'Eventos (disparadores)', link: '/referencia/eventos' },

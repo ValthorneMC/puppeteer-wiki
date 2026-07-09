@@ -22,7 +22,7 @@ Dice un mensaje por chat. Admite colores con `&` (por ejemplo `&c` para rojo, `&
 
 ### `animate <nombre> [loop]`
 
-Reproduce una animación del modelo del NPC (necesita BetterModel). Añade `loop` al final si quieres que se repita en bucle en vez de reproducirse una sola vez.
+Reproduce una animación del modelo del NPC (BetterModel). Añade `loop` al final si quieres que se repita en bucle en vez de reproducirse una sola vez.
 
 ```yaml
 - animate saludo
@@ -79,7 +79,7 @@ Lanza una habilidad de MythicMobs. Sin `at:`, apunta al objetivo de combate actu
 
 ### `givemoney <jugador> <cantidad>`
 
-Da dinero a un jugador (necesita VEconomy instalado).
+Da dinero a un jugador (VEconomy).
 
 ```yaml
 - givemoney <context.killer> 100
