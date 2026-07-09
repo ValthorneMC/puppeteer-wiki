@@ -7,7 +7,7 @@ hero:
   tagline: Motor de scripts en YAML para NPCs de Citizens en el servidor Valthorne — combate, patrullas, diálogos y eventos, todo desde un archivo de texto.
   actions:
     - theme: brand
-      text: ¿Qué es Puppeteer?
+      text: Cómo funciona
       link: /guia/que-es-puppeteer
     - theme: alt
       text: Instalación

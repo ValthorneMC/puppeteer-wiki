@@ -1,22 +1,18 @@
-# ¿Qué es Puppeteer?
+# Cómo funciona
 
-Puppeteer es el plugin que da comportamiento a los NPCs del servidor. En vez de configurar cada cosa con comandos sueltos, escribes un archivo de texto (un **script**) que describe todo lo que ese NPC debe hacer, y se lo asignas. A partir de ahí, el NPC vive solo: patrulla, saluda, ataca, se defiende, muere y reaparece según lo que hayas escrito.
+El comportamiento de un NPC se define en un archivo `.yml` (un **script**) dentro de `plugins/Puppeteer/scripts/`, y se asigna al NPC con `/puppeteer assign`. A partir de ahí el NPC actúa solo según lo escrito: patrulla, saluda, ataca, se defiende, muere y reaparece.
 
-Piensa en un script como la "personalidad" de un NPC, guardada en un archivo. Puedes tener varios scripts distintos (un guardia, un vendedor, un aldeano que solo saluda) y asignar cada uno al NPC que corresponda. Si algún día quieres cambiar cómo se comporta un guardia, editas ese único archivo y todos los guardias que lo usan cambian a la vez.
+Un script se puede reutilizar en varios NPCs (todos los guardias usan el mismo `guardia.yml`, por ejemplo) y editarlo cambia a todos los que lo usan a la vez.
 
-## ¿Qué puede hacer un NPC con Puppeteer?
+## Qué puede hacer un NPC
 
-- **Reaccionar a lo que pasa a su alrededor**: que te vea, que le hables, que le ataquen, que muera, que llegue a un sitio.
-- **Hablar**: mensajes fijos o elegidos al azar entre varias frases.
-- **Moverse**: mirar hacia algo, caminar a un punto, seguir una ruta de patrulla previamente grabada.
-- **Pelear de verdad**: elegir a quién atacar, cambiar de arma según la distancia, perseguir, disparar flechas apuntando de verdad, recibir daño, curarse poco a poco, morir y volver a aparecer más tarde.
-- **Animarse**: reproducir animaciones de su modelo (si usas BetterModel).
-- **Repartir recompensas**: dar dinero al matarlo (si usas VEconomy) o lanzar habilidades de MythicMobs.
+- **Reaccionar**: verte, que le hables, que le ataquen, morir, llegar a un sitio.
+- **Hablar**: mensajes fijos o elegidos al azar.
+- **Moverse**: mirar, caminar a un punto, seguir una ruta de patrulla grabada.
+- **Pelear**: elegir objetivo, cambiar de arma según distancia, perseguir, disparar flechas apuntando de verdad, recibir daño, curarse, morir y reaparecer.
+- **Animarse**: reproducir animaciones de su modelo (con BetterModel).
+- **Repartir recompensas**: dar dinero al morir (VEconomy) o lanzar habilidades de MythicMobs.
 
-Todo esto se escribe en un único archivo `.yml` por script, dentro de la carpeta `scripts/` del plugin. No hace falta reiniciar el servidor para probar cambios: existe un comando para recargar todos los scripts al vuelo.
+`/puppeteer reload` aplica los cambios de cualquier script sin reiniciar el servidor.
 
-## ¿Para quién es esta wiki?
-
-Para quien vaya a **escribir o editar scripts de Puppeteer**, sin que haga falta saber programar. Aquí no vas a encontrar explicaciones de cómo está construido el plugin por dentro — solo lo que necesitas para escribir un script y que funcione: qué opciones existen, qué significan, y ejemplos completos que puedes copiar y adaptar.
-
-Sigue con [Instalación](/guia/instalacion) si aún no tienes Puppeteer en marcha, o pasa directamente a [Tu primer NPC](/guia/primer-npc) si ya lo tienes.
+Sigue con [Instalación](/guia/instalacion) o directo a [Tu primer NPC](/guia/primer-npc).

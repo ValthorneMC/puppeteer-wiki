@@ -5,14 +5,12 @@ export default defineConfig({
   title: 'Puppeteer',
   description: 'Wiki de administración de Puppeteer, el motor de scripting de NPCs para Valthorne',
 
-  // Cambia esto si el sitio se publica en un repo con otro nombre o en una organización
-  // en modo "user/organization page" (en ese caso, base debe ser simplemente '/').
-  base: '/',
+  base: '/puppeteer-wiki/',
 
   themeConfig: {
     nav: [
       { text: 'Inicio', link: '/' },
-      { text: 'Guía', link: '/guia/que-es-puppeteer' },
+      { text: 'Cómo funciona', link: '/guia/que-es-puppeteer' },
       { text: 'Referencia', link: '/referencia/comandos-de-consola' },
       { text: 'Ayuda', link: '/ayuda/solucion-de-problemas' }
     ],
@@ -21,7 +19,7 @@ export default defineConfig({
       {
         text: 'Guía',
         items: [
-          { text: '¿Qué es Puppeteer?', link: '/guia/que-es-puppeteer' },
+          { text: 'Cómo funciona', link: '/guia/que-es-puppeteer' },
           { text: 'Instalación', link: '/guia/instalacion' },
           { text: 'Tu primer NPC', link: '/guia/primer-npc' },
           { text: 'Conceptos básicos', link: '/guia/conceptos' },

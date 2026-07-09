@@ -1,7 +1,5 @@
 # Conceptos básicos
 
-Antes de lanzarte a escribir scripts más elaborados, conviene tener claras cuatro ideas: **contenedores**, **eventos**, **acciones en orden**, y **variables de texto**.
-
 ## Contenedores: los "bloques" de un script
 
 Cada archivo `.yml` puede tener uno o varios bloques de primer nivel. Cada bloque tiene un nombre (el que tú elijas) y un `type:` que dice qué es:
@@ -74,10 +72,4 @@ Cuando escribes algo entre `< >`, Puppeteer lo sustituye por un valor real en el
 
 No hace falta memorizar todas — la lista completa está en [Variables de texto (tags)](/referencia/variables) — pero conviene saber que existen y que se usan tanto para mostrar texto (`narrate "Hola <context.clicker.name>"`) como para tomar decisiones (`if <context.target.dist> < 20:`).
 
-## Con esto ya puedes
-
-- Escribir un `assignment` con varios eventos.
-- Encadenar acciones con pausas (`wait`), condiciones (`if`/`else`) y variación (`random`).
-- Reutilizar bloques de acciones con `task` + `run`.
-
-Para un NPC de combate completo, con salud, persecución, disparo de flechas y demás, pasa a [Combate](/referencia/combate) — es la sección más grande de esta wiki porque es, con diferencia, lo más completo que hace Puppeteer.
+Para un NPC de combate completo (salud, persecución, disparo de flechas...), ve a [Combate](/referencia/combate).
