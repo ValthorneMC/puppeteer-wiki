@@ -31,3 +31,13 @@ Confirma que has ejecutado `/puppeteer reload` después de guardar el archivo, y
 ## `look`/`walk` dan error con una ubicación
 
 Estos comandos necesitan una variable (`<context.target>`, `<npc.location>`...) como destino, no coordenadas escritas a mano. Ver [Variables de texto](/referencia/variables).
+
+## Un `narrate` con dos puntos en el mensaje no funciona / rompe el script
+
+Por ejemplo `- narrate "Modo: <define.modo>"`. Esto **no es un bug de Puppeteer, es una regla de YAML**: un `:` seguido de espacio se interpreta como parte de la estructura del archivo, incluso dentro de las comillas (porque la línea empieza sin comillas, en `narrate `, así que las comillas que vienen después no cuentan como "encomillar la línea entera" a ojos de YAML). El propio script deja de cargarse bien y `/puppeteer reload` avisará del error.
+
+**Solución:** evita `: ` dentro del mensaje. Usa `->` o `-` en su lugar:
+
+```yaml
+- narrate "&7Modo -> <define.modo>"   # bien
+```

@@ -58,3 +58,26 @@ Cuando una variable apunta a una posición (por ejemplo `<npc.location>` o `<con
 |---|---|
 | `.x` / `.y` / `.z` | Coordenadas. |
 | `.world` | Nombre del mundo. |
+
+## `<define...>` — valores guardados con `define`
+
+`<define.nombre>` devuelve el valor que guardaste antes con `- define nombre valor` en la misma secuencia.
+
+```yaml
+- define modo hostil
+- narrate "&7Modo -> <define.modo>"
+```
+
+## `<papi[...]>` — placeholders de PlaceholderAPI
+
+Cualquier placeholder de PlaceholderAPI, con su sintaxis normal entre `%...%`:
+
+```yaml
+- narrate "&7Hola, <papi[%player_name%]>"
+```
+
+::: warning Dos puntos dentro de un mensaje
+`- narrate "Modo: <define.modo>"` **rompe el YAML** — un `:` seguido de espacio se interpreta
+como parte de la estructura del archivo, incluso dentro de las comillas. Usa `->` o `-` en su
+lugar. Más en [Solución de problemas](/ayuda/solucion-de-problemas).
+:::

@@ -40,8 +40,7 @@ export default defineConfig({
         text: 'Ayuda',
         items: [
           { text: 'Solución de problemas', link: '/ayuda/solucion-de-problemas' },
-          { text: 'Preguntas frecuentes', link: '/ayuda/preguntas-frecuentes' },
-          { text: 'Qué queda por llegar', link: '/ayuda/proximamente' }
+          { text: 'Preguntas frecuentes', link: '/ayuda/preguntas-frecuentes' }
         ]
       }
     ],

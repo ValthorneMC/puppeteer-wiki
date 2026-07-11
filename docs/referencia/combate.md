@@ -2,6 +2,8 @@
 
 La sección `combat:` de un `assignment` convierte al NPC en un combatiente completo: elige a quién atacar, se acerca, cambia de arma según la distancia, dispara flechas de verdad apuntando al objetivo, recibe daño, se cura poco a poco, muere y reaparece más tarde.
 
+Para acercarse al objetivo usa el mismo motor de rutas que las patrullas (ver [Rutas de patrulla](/guia/rutas)): calcula un camino real esquivando obstáculos en vez de fiarse del pathfinding nativo de Citizens, así que llega de forma fiable incluso con terreno irregular entre medias.
+
 ## Ejemplo completo
 
 ```yaml
@@ -19,6 +21,9 @@ guardian:
     ignore:
       - "permission:puppeteer.safe"
     aggro-range: 16
+    accuracy: 0.5
+    allow-knockback: true
+    health-bar: true
 
     weapons:
       - item: BOW
@@ -86,6 +91,14 @@ Cada entrada de `targets`/`ignore` puede ser:
 - `"mythicmob:<nombre>"` — un tipo concreto de mob de MythicMobs. Ejemplo: `"mythicmob:goblin_archer"`.
 - `"permission:<permiso>"` — jugadores con ese permiso.
 - El nombre de un tipo de entidad vanilla, por ejemplo `ZOMBIE` o `SKELETON`.
+
+## Puntería y físicas
+
+| Clave | Por defecto | Qué hace |
+|---|---|---|
+| `accuracy` | `0` | Dispersión máxima del disparo, en bloques, por eje. `0` = puntería perfecta; cuanto más alto, más falla. Solo afecta a armas a distancia. |
+| `allow-knockback` | `true` | Si es `false`, el NPC no sale despedido hacia atrás al recibir un golpe. |
+| `health-bar` | `true` | Indicador flotante con el nombre y la vida actual del NPC, visible para los jugadores cercanos y actualizado solo (usa PacketEvents). Ponlo en `false` para quitarlo. |
 
 ## Armas
 

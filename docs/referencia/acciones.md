@@ -105,7 +105,12 @@ Ejecuta una `task` (ver [Conceptos básicos](/guia/conceptos)) como una secuenci
 
 ### `define <nombre> <valor>`
 
-Guarda un valor de texto con ese nombre, para el resto de la secuencia actual. (Nota: de momento este valor no se puede releer con una variable `<...>` desde el propio script — llegará en una fase futura. Por ahora, úsalo solo si de verdad lo necesitas.)
+Guarda un valor de texto con ese nombre para el resto de la secuencia actual. Se relee con `<define.nombre>` (ver [Variables de texto](/referencia/variables)).
+
+```yaml
+- define modo hostil
+- narrate "&7Modo -> <define.modo>"
+```
 
 ### `if <condición>:` / `else:`
 
